@@ -1,11 +1,12 @@
-# Slides from my Transform 2021 talk - Version Control for Scientists
+# Version Control for Scientists
+## A Transform 2021 Tutorial
 
-view the slides here [stevejpurves.github.io/t21-version-control-for-scientists](stevejpurves.github.io/t21-version-control-for-scientists)
+View the slide deck here: [stevejpurves.github.io/t21-version-control-for-scientists](stevejpurves.github.io/t21-version-control-for-scientists)
 
 ## Other Resources
 
- - [intro blog post](https://curvenote.com/@stevejpurves/blog/t21-version-control-for-scientists)
- - [pre-requisites](https://curvenote.com/@stevejpurves/blog/t21-tutorial-prerequisites)
- - [loerm ispum repo](https://github.com/euclidity/t21-lorem-ipsum)
- - [Seismic Notebook Repo](https://github.com/stevejpurves/t21-seismic-notebook)
- - [Curvenote Project](https://curvenote.com/@stevejpurves/transform-2021)
+ - [My intro blog post a week before the event](https://curvenote.com/@stevejpurves/blog/t21-version-control-for-scientists)
+ - [A short guide to setting up](https://curvenote.com/@stevejpurves/blog/t21-tutorial-prerequisites)
+ - [The lorem ispum repo I use to should PRs](https://github.com/euclidity/t21-lorem-ipsum)
+ - [The Seismic Notebook Repo I used with Curvenote](https://github.com/stevejpurves/t21-seismic-notebook)
+ - [The Transform 2021 Curvenote Project](https://curvenote.com/@stevejpurves/transform-2021)
