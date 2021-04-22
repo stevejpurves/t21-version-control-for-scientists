@@ -3,7 +3,7 @@
 
 Watch the Tutorial on [YouTube](https://www.youtube.com/watch?v=S4uqsbV-gxY)
 
-View the slide deck here: [stevejpurves.github.io/t21-version-control-for-scientists](stevejpurves.github.io/t21-version-control-for-scientists)
+View the slide deck here: [stevejpurves.github.io/t21-version-control-for-scientists](https://stevejpurves.github.io/t21-version-control-for-scientists)
 
 ## Other Resources
 
