@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Version Control for Scientists</title>
+
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-quicksand theme-color-black-mint">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="168134a0fd504566aeb0431a37476246"><div class="sl-block" data-block-type="image" data-name="image-78ce0c" data-block-id="2c54f1539aa6c975c598a2cb23ea6cba" style="width: 806.399px; height: 502.793px; left: 76.8005px; top: 98.6035px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1838" data-natural-height="1146" data-lazy-loaded="" data-src="version-control-for-scientists/944f7c1c5faacf74303f78fb1fb6e8f1.png"></div></div></section><section class="stack" data-id="41e98b961e6351d8a95883020d404366"><section data-id="758eb748ca68ae4b1af980878304901f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 113px; height: auto;" data-block-id="e879585af883a1ee93514b511be75f47"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="color: rgb(255, 255, 255); z-index: 10;">
+<h1>Version Control for Scientists</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-cfeee7" data-block-id="81f516329f420f73ecd549d11430a552" style="height: auto; width: 600px; left: 180px; top: 330.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p>TRANSFORM 2021</p>
+
+<p>April 22 - 11am UTC</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-be9ac2" data-block-id="0518dd36e4ac0f862a15ba0996c38cea" style="height: auto; width: 600px; left: 180px; top: 457px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>Steve Purves</p>
+
+<p> </p>
+
+<p> </p>
+
+<p><a href="http://curvenote.com/@stevejpurves" target="_blank">curvenote.com/@stevejpurves</a></p>
+
+<p><a href="mailto:steve@curvenote.com" target="_blank">steve@curvenote.com</a></p>
+</div></div></section><section data-id="9ef506c52972e40991b06ed99504990a"><div class="sl-block" data-block-type="text" data-name="text-af0c0c" data-block-id="c9488ccde9a22b41d3665d1dead20f3e" style="height: auto; width: 600px; left: 187px; top: 66px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>objectives</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-856650" data-block-id="73b29922f10ec477d0218b999dab590c" style="height: auto; width: 600px; left: 180px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>share my practices</h3>
+
+<h3>take time to look closer</h3>
+
+<h3>gain some insights</h3>
+</div></div></section><section data-id="efb61ac9adedd444202e43d6aa2aa841"><div class="sl-block" data-block-type="text" data-name="text-af0c0c" style="height: auto; width: 600px; left: 180px; top: 66px;" data-block-id="2a65881b88405a6cb29c47a25d859e45"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>CONTENTS</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-856650" style="height: auto; width: 800px; left: 80px; top: 280px;" data-block-id="fc4892557e6c6bc013719dd72d1ebf97"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>lots (but not all) about git</h3>
+
+<h3>curvenote - jupyter notebooks</h3>
+
+<h3>data versioning</h3>
+</div></div></section><section data-id="0693b8b9a5108c4c882575826b59dca1"><div class="sl-block" data-block-type="text" data-name="text-57ac8d" data-block-id="875c6cbf0f177cc8a3a740c1c5c3a1a1" style="height: auto; width: 800px; left: 80px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>burning git questions</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-572f5e" data-block-id="7a304fe5f6b6ea6c1a10511a1b41238b" style="width: 737.842px; height: 421.892px; left: 111.079px; top: 144px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2361" data-natural-height="1350" data-lazy-loaded="" data-src="version-control-for-scientists/17ba830c50c8de63112290dd00cef17c.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-e75f1f" data-block-id="c66425284f5be579077870aa48fd4f6b" style="height: auto; width: 600px; left: 180px; top: 603.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><a href="https://app.sli.do/event/lmmuqiwq" target="_blank">https://app.sli.do/event/lmmuqiwq</a></p>
+</div></div></section><section data-id="8d9ff32d2ba7601c2b8646341a5816af"><div class="sl-block" data-block-type="image" data-name="image-e91800" data-block-id="753da3eb20148466b2d4db998155d29d" style="width: 618.951px; height: 408px; left: 170.524px; top: 146px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="2048" data-natural-height="1350" data-lazy-loaded="" data-src="version-control-for-scientists/0025bc8e56b1f6b6a761f35df23e36d2.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-b3fc91" data-block-id="31249809142725840cbedb74bae3448f" style="height: auto; width: 600px; left: 180px; top: 560px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><a href="https://git-scm.com/book/en/v2" target="_blank">https://git-scm.com/book/en/v2</a></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-57ac8d" style="height: auto; width: 800px; left: 80px; top: 70px;" data-block-id="a287df0fea0dec629cef94fe1e530912"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>the git book</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-902506" data-block-id="e8c31145ae5cde4b1858cb83c458c6cf" style="height: auto; width: 600px; left: 180px; top: 605px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">cc-by-na-sa-3.0</a></h3>
+</div></div></section></section><section class="stack" data-id="feb2cbb65fd25f61296a29bf2016a9cb"><section data-id="940dd29899292cd9beae61a67b997bef"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 104px; height: auto;" data-block-id="86e882e81438c258b01d08a8c06ed2b3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>set up</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-7b20f6" data-block-id="80c0f5c37c62fa7a2846f9be095f3db2" style="height: auto; width: 600px; left: 180px; top: 330.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3 style="text-align:left">pre-reqs:</h3>
+
+<ul>
+	<li>
+	<h3>Install git</h3>
+	</li>
+	<li>
+	<h3>Install VS Code</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="8a42fcc34c2f4faba259b0026b54035b"><div class="sl-block" data-block-type="image" data-name="image-5d5f9a" data-block-id="b01bec84970f298e5033ca863c899a96" style="width: 806.4px; height: 468.132px; left: 76.8px; top: 115.934px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="2074" data-natural-height="1204" data-lazy-loaded="" data-src="version-control-for-scientists/6364c3f5ac3b87090d78c52022693cc1.png"></div></div></section><section data-id="3145a2d73dbdea23b735bd5374d19f80"><div class="sl-block" data-block-type="image" data-name="image-e1fa57" data-block-id="20ff8a6870e56c6bb1c9c80bc3e88875" style="width: 806.399px; height: 512.542px; left: 80px; top: 140px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="2124" data-natural-height="1350" data-lazy-loaded="" data-src="version-control-for-scientists/efd6c6bdaf8ff826b0fc0dd7553b6e84.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-396417" data-block-id="b29b7fcb0761e4f831db04733cccc432" style="height: auto; width: 760px; left: 103px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Install the 'Git Graph' extension</h3>
+</div></div></section><section data-id="4d901dbd261f858acda7944624d21493"><div class="sl-block" data-block-type="text" data-name="text-c35f68" data-block-id="da78ac09595313a19eda93ee3eea560b" style="height: auto; width: 600px; left: 188px; top: 90px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>setup github</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-d4237b" data-block-id="3cc9916b87bfe9e3b56fa5434296ef5a" style="width: 550.444px; height: 426px; left: 212.778px; top: 176px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1181" data-natural-height="914" data-lazy-loaded="" data-src="version-control-for-scientists/c83ba4fb7960b7a5bfd8ebf6ec4c9a60.png"></div></div></section><section data-id="f38a818f1773aee33d0003bbdc0635b9"><div class="sl-block" data-block-type="text" data-name="text-8f8275" data-block-id="f0ebd264ec3df8b8f0c7c5d0f536a106" style="height: auto; width: 600px; left: 180px; top: 90px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>configure ssh</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-b8cfc1" data-block-id="f307495b730a47c282188d3f8be79f35" style="width: 800px; height: 107px; left: 80px; top: 173px;"><div class="sl-block-style" style="z-index: 11; transform: rotate(0deg);"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 22px; line-height: 26px;"><code data-line-numbers="">$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code></pre></div></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-1e589f" data-block-id="9e29b765455408adb6183c0843b01447" style="height: auto; width: 600px; left: 180px; top: 388.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><a href="https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account" target="_blank">GitHub: Adding a new SSH key to your GitHub account</a></p>
+</div></div></section><section data-id="27cb59f20c2d3a992d7c01ac3ca879d0"><div class="sl-block" data-block-type="text" data-name="text-963d36" data-block-id="cbefc1c8a3f75ca7f2aef13a531efb5d" style="height: auto; width: 600px; left: 180px; top: 90px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>generating text</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-5e8f7c" data-block-id="91cbc72a71760273c80a2cfe829451bb" style="width: 800px; height: 140px; left: 80px; top: 210px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 28px; line-height: 34px;"><code data-line-numbers="">curl -s http://metaphorpsum.com/paragraphs/N
+curl -s http://metaphorpsum.com/sentences/N</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 140px; left: 80px; top: 407px;" data-block-id="81ee7733555bf4915dd9a8a839963208" data-name="code-b2b411"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre style="font-size: 22px; line-height: 26px;"><code data-line-numbers="">curl -s http://metaphorpsum.com/paragraphs/N &gt;&gt; file1.txt</code></pre></div></div></section><section data-id="7cb5996f5c4c19438426805cf8976c68"><div class="sl-block" data-block-type="text" data-name="text-c0f616" data-block-id="2d647ae906dc9d00e7a7b13bb7d7c0f5" style="height: auto; width: 600px; left: 180px; top: 90px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Set up a working area</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-53833a" data-block-id="f60aff9872ba5a5c57b8f7861387d546" style="width: 800px; height: 210px; left: 80px; top: 210px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 21px; line-height: 25px;"><code data-line-numbers="">(base) ✔ ~/dev/t21 
+16:31 $ ls -l
+total 0
+drwxr-xr-x  2 stevejpurves  staff  64 20 Apr 16:31 repo_one
+(base) ✔ ~/dev/t21 
+16:32 $ </code></pre></div></div></section><section data-id="fefbec93aeca7236c5b052656b21e22f"><div class="sl-block" data-block-type="image" data-name="image-a9ca38" data-block-id="217615afcfc8c22b41aa43f5b9a93f0a" style="width: 590.236px; height: 666px; left: 359.3px; top: 14px;"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="818" data-natural-height="923" style="" data-lazy-loaded="" data-src="version-control-for-scientists/d64fe7edddff9ac88c62b5a016be169a.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-4f48a6" data-block-id="ff14fbc383b91925457ea0e093782cfa" style="height: auto; width: 246px; left: 53.418px; top: 140px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3><span style="font-size:0.7em">pinned items in the tutorial slack channel</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-e19cf5" data-block-id="9dcde8d31d1aaff2ae1439537610fe35" style="height: auto; width: 283px; left: 46.418px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<pre style="text-align: center;"><span style="font-size:0.7em"><a href="https://swung.slack.com/archives/C01RGGXNR9P" target="_blank">#t21-source-control</a></span></pre>
+</div></div></section></section><section class="stack" data-id="3b4e7cce57b388a755526addc11747f6"><section data-id="50b0bf677f00999cecdb99ed72b463ee"><div class="sl-block" data-block-type="text" data-name="text-d6a12b" data-block-id="ddd2230634de34657ab5758e394a5154" style="height: auto; width: 600px; left: 180px; top: 66px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>Cloning</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-6f3079" data-block-id="5552de40d3cd8a44838d33f1c6d16fbe" style="height: auto; width: 600px; left: 180px; top: 270px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Use Case: Getting someone else's code and taking a good look at it</h3>
+</div></div></section><section data-id="31b6422e5d2e7ffb58fdab2d57fe11fb"><div class="sl-block" data-block-type="text" data-name="text-ac4f63" data-block-id="7f611dd965039e8546ab27b26aa76226" style="height: auto; width: 600px; left: 180px; top: 330.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Find some code on GitHub!</h3>
+</div></div></section><section data-id="b088751a08e5ea4630199c00af0dd108"><div class="sl-block" data-block-type="code" data-name="code-608ca1" data-block-id="40551270512ccb09af2bf459d819fccd" style="width: 800px; height: 70px; left: 80px; top: 280px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 10;"><pre style="font-size: 29px; line-height: 35px;"><code data-line-numbers="">git clone _______________</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-645f2f" data-block-id="f6ba0f69b127448bca6f5d28707ffb60" style="height: auto; width: 600px; left: 180px; top: 370.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><a href="https://github.com/softwareunderground/awesome-open-geoscience" target="_blank">https://github.com/softwareunderground/awesome-open-geoscience</a></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-01b8bd" data-block-id="6bd08467029d233b2672d6a283159a3f" style="height: auto; width: 600px; left: 180px; top: 521px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p>SSH or HTTP</p>
+</div></div></section><section data-id="20386df92d0ac9cd6da1a754c76acde1"><div class="sl-block" data-block-type="text" data-name="text-135611" data-block-id="c7e9956907510f54c89446db4a27f964" style="height: auto; width: 600px; left: 180px; top: 41.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>look around</h2>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-3248c1" data-block-id="9182104ce001bbb2567ea297ec6d9ffb" style="width: 640px; height: 420px; left: 160px; top: 140px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 21px; line-height: 25px;"><code data-line-numbers="">git clone
+
+ls -l
+
+ls -la
+
+ls -la .git 
+
+git branch
+
+git checkout
+
+git log
+
+git log --graph --oneline --decorate --all</code></pre></div></div></section><section data-id="ee66b2c2465b1863acad70b95e3b0f9d"><div class="sl-block" data-block-type="text" data-name="text-442e0c" data-block-id="7cfa165275126c2bbdb3698787947b8a" style="height: auto; width: 600px; left: 194px; top: 244.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>get a prettier command line</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-99e2f1" data-block-id="b10c268af678570ce7652e93e035c5bf" style="height: auto; width: 600px; left: 180px; top: 490px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><a href="https://formulae.brew.sh/formula/bash-git-prompt" target="_blank">bash-git-prompt</a></p>
+</div></div></section><section data-id="517f30ec46b48dfceb4cfb863d3e9f6b"><div class="sl-block" data-block-type="text" data-name="text-80973f" data-block-id="02b92055f06fe07951fab0437c76366e" style="height: auto; width: 600px; left: 180px; top: 255.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>jump into VSCode!</h2>
+</div></div></section><section data-id="c2a9122c413c15fa3c87280de3cbe107"><div class="sl-block" data-block-type="text" data-name="text-593b0c" data-block-id="f2660d74e25ed4e6998f4986bfe8a3d5" style="height: auto; width: 515px; left: 80px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Questions Answered:</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-e3bd2e" data-block-id="6a0a67914c6c389ce2fbd601ddcd0097" style="height: auto; width: 760px; left: 120px; top: 152.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left"><em>Q:</em> <em>Is there a benefit to using a desktop client? I get confused sometimes using the command line, but then I tried a client and it didn't help. Which one is best?</em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-bb4880" data-block-id="141de9bb17f35a2d3bae51d766c12c1d" style="height: auto; width: 600px; left: 120px; top: 311px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align: left;"><em>Q: What is the minimum I need to know to use git alone?</em></p>
+</div></div></section></section><section class="stack" data-id="7d96fb4469637b9e09ec89abd3aedbe1"><section data-id="331f62b2455a1834bc742f3c8f78cea6"><div class="sl-block" data-block-type="text" data-name="text-daad77" data-block-id="d1e3e36a3bb22a1a27ecec512e214710" style="height: auto; width: 600px; left: 180px; top: 66px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>theory</h2>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-name="text-7ecbb5" data-block-id="a6afe12599183ada2acf3e9b25ab70eb" style="height: auto; width: 600px; left: 180px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3>let's talk more about how git works</h3>
+</div></div></section><section data-id="dc18bcb9a65b742fa6b433504b3b83bf"><div class="sl-block" data-block-type="text" data-name="text-cd3ea8" data-block-id="6d2d0db1518612f874034728754de8e0" style="height: auto; width: 600px; left: 180px; top: 90px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>git is a database</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 230px;" data-block-id="eac7b56e5f4b66106412177993b97a6e" data-name="text-8889a1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>a &lt;key: Value&gt; store</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-ca36e0" data-block-id="8b3d3027fbfd394e9b9112b3b29d517d" style="height: auto; width: 726px; left: 117px; top: 420px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects" target="_blank">Further Reading: 10.2 Git Internals - Git Objects</a> </p>
+</div></div></section><section data-id="6825a590a8f4bc5cbca30d740ff7e9e7"><div class="sl-block" data-block-type="text" data-name="text-75f893" data-block-id="b8a8bb0ed4dacab699ac4f2eed3a649c" style="height: auto; width: 600px; left: 180px; top: 90px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>trees</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-6c063f" data-block-id="bae4e9474a24f070fb432625f2b78a10" style="width: 698.82px; height: 518px; left: 130.59px; top: 161px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="800" data-natural-height="593" data-lazy-loaded="" data-src="version-control-for-scientists/74b02d977c3e7b5707328204fba1f463.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-92b0af" data-block-id="1d1b167e1466984f41145b1f9b722e3a" style="height: auto; width: 327px; left: 20px; top: 630px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><a href="https://git-scm.com/" target="_blank">https://git-scm.com/</a></p>
+</div></div></section><section data-id="53715373ceb304bd0f839ef4d2e9c8cd"><div class="sl-block" data-block-type="image" data-name="image-5f05a8" data-block-id="200df7a9da7a536b09f22a6208f81057" style="width: 618.487px; height: 460px; left: 181.513px; top: 140px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="800" data-natural-height="595" data-lazy-loaded="" data-src="version-control-for-scientists/f8a40dc9bd8bf7daf2039d3e84b1fbec.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-75f893" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="a201622b4b44461ca8be70800d42f9fa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>versions</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-92b0af" style="height: auto; width: 327px; left: 20px; top: 630px;" data-block-id="eb85ac9512869c3179b5fe6d1f0034e9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><a href="https://git-scm.com/" target="_blank">https://git-scm.com/</a></p>
+</div></div></section><section data-id="761193771fdab97dee7ed11b7df67a75"><div class="sl-block" data-block-type="image" data-name="image-39847b" data-block-id="e9ac505b6d1107de8c7661d36de738fc" style="width: 806.4px; height: 426.384px; left: 76.8px; top: 140px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="800" data-natural-height="423" data-lazy-loaded="" data-src="version-control-for-scientists/5dee8545fcc888dcabf58ccc02913b36.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-75f893" style="height: auto; width: 600px; left: 240px; top: 92.5px;" data-block-id="0fec039d7634fe62043528ce2c8d52c4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>REFS =&gt; TAGS, Branches</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-92b0af" style="height: auto; width: 327px; left: 20px; top: 630px;" data-block-id="985b9b0247a2c9ddb3aa39ffec34b3bf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><a href="https://git-scm.com/" target="_blank">https://git-scm.com/</a></p>
+</div></div>
+<div class="sl-block" data-block-type="shape" data-name="shape-2717eb" data-block-id="ad8be5ae782651798702601b4f5ada24" style="width: 166px; height: 55px; left: 86px; top: 62.5px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(234, 153, 153)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 166 55"><rect width="166" height="55" rx="0" ry="0" class="shape-element" fill="rgb(234, 153, 153)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-d3fe21" data-block-id="015a92c95fdccaa10651e29d84dadd33" style="height: auto; width: 166px; left: 86px; top: 70.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>HEAD</p>
+</div></div>
+<div class="sl-block" data-block-type="line" data-name="line-c6db54" data-block-id="0fd7b9ff5c91a8cd701d1be239b10198" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 169px; top: 117.5px;"><div class="sl-block-content" data-line-x1="0" data-line-y1="65" data-line-x2="0" data-line-y2="0" data-line-color="#cccccc" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 17;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="65" viewbox="0 0 1 65"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="61" x2="0" y2="0"></line><line class="line-element" stroke="#cccccc" stroke-width="2" x1="0" y1="61" x2="0" y2="0"></line><polygon fill="#cccccc" transform="translate(0,61) rotate(0)" points="0,4 4,-4 -4,-4"></polygon></svg></div></div></section><section data-id="3fa8ec6be5287ed2e2eb5168479dc23f"><div class="sl-block" data-block-type="image" data-name="image-4b44fb" data-block-id="ddf2330f5e51eee2174a83b3966e36d7" style="width: 806.4px; height: 516.096px; left: 76.8px; top: 91.952px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="800" data-natural-height="512" style="" data-lazy-loaded="" data-src="version-control-for-scientists/609af24536ab78952a3c9e2d7f545091.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-75f893" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="e9f01db8c9a351c6f44bf7e7c9570265"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>Branches</h3>
+</div></div></section><section data-id="f1ba68270df3d1724e844a08c5d39ecd"><div class="sl-block" data-block-type="text" data-name="text-75f893" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="8da5876d24efdfbdf3e028d1f583bc9d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>[detached] head</h3>
+</div></div>
+<div class="sl-block" data-block-type="shape" data-name="shape-5e6263" data-block-id="98f5ba4968d9e6e7207fa6b2a8aec9e8" style="width: 118px; height: 46px; left: 80px; top: 467px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(204, 204, 204)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 118 46"><rect width="118" height="46" rx="0" ry="0" class="shape-element" fill="rgb(204, 204, 204)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 118px; height: 46px; left: 282px; top: 467px;" data-block-id="5434f4e63b7a851590f5f926e90ba771" data-name="shape-7b2986"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(204, 204, 204)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 118 46"><rect width="118" height="46" rx="0" ry="0" class="shape-element" fill="rgb(204, 204, 204)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 118px; height: 46px; left: 480px; top: 467px;" data-block-id="c4fde890806912fb719766b83f9512c6" data-name="shape-f50cc7"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(204, 204, 204)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 118 46"><rect width="118" height="46" rx="0" ry="0" class="shape-element" fill="rgb(204, 204, 204)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 118px; height: 46px; left: 682px; top: 467px;" data-block-id="2916711b5c324d5a9909df658597eba6" data-name="shape-204963"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(204, 204, 204)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 118 46"><rect width="118" height="46" rx="0" ry="0" class="shape-element" fill="rgb(204, 204, 204)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 118px; height: 46px; left: 480px; top: 327px;" data-block-id="35e3de691fd555dfb80389c2bf8cb269" data-name="shape-cd8e82"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(204, 204, 204)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 118 46"><rect width="118" height="46" rx="0" ry="0" class="shape-element" fill="rgb(204, 204, 204)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 118px; height: 46px; left: 682px; top: 327px;" data-block-id="3b87c1cc01fb4b39c05ff0febb354319" data-name="shape-318b28"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(204, 204, 204)" data-shape-stretch="true" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 118 46"><rect width="118" height="46" rx="0" ry="0" class="shape-element" fill="rgb(204, 204, 204)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 118px; height: 46px; left: 282px; top: 327px;" data-block-id="c2b215ed6eb54cf71177e1ecf9744d6f" data-name="shape-e43619"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(204, 204, 204)" data-shape-stretch="true" style="z-index: 17;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 118 46"><rect width="118" height="46" rx="0" ry="0" class="shape-element" fill="rgb(204, 204, 204)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="line" data-name="line-b5150e" data-block-id="49d88bc3a97554f5ddd4b97233c2ba33" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 198px; top: 490px;"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="84" data-line-y2="0" data-line-color="#cccccc" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 18;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="84" height="1" viewbox="0 0 84 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="4" y1="0" x2="84" y2="0"></line><line class="line-element" stroke="#cccccc" stroke-width="2" x1="4" y1="0" x2="84" y2="0"></line><polygon fill="#cccccc" transform="translate(4,0) rotate(90)" points="0,4 4,-4 -4,-4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 139px; top: 350px;" data-block-id="f67d2f424cfd38888a15c535f29926f5" data-name="line-57b923"><div class="sl-block-content" data-line-x1="0" data-line-y1="117" data-line-x2="143" data-line-y2="0" data-line-color="#cccccc" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 19;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="143" height="117" viewbox="0 0 143 117"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="3.0958291968132845" y1="114.46704883897095" x2="143" y2="0"></line><line class="line-element" stroke="#cccccc" stroke-width="2" x1="3.0958291968132845" y1="114.46704883897095" x2="143" y2="0"></line><polygon fill="#cccccc" transform="translate(3.0958291968132845,114.46704883897095) rotate(50.711)" points="0,4 4,-4 -4,-4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 400px; top: 490px;" data-block-id="629fadceac90a58efa6064adb19dad6b" data-name="line-061a4b"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="80" data-line-y2="0" data-line-color="#cccccc" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 20;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="80" height="1" viewbox="0 0 80 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="4" y1="0" x2="80" y2="0"></line><line class="line-element" stroke="#cccccc" stroke-width="2" x1="4" y1="0" x2="80" y2="0"></line><polygon fill="#cccccc" transform="translate(4,0) rotate(90)" points="0,4 4,-4 -4,-4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 598px; top: 490px;" data-block-id="183358004071dc7f4fbbaa5a9c92a672" data-name="line-d58a60"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="84" data-line-y2="0" data-line-color="#cccccc" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 21;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="84" height="1" viewbox="0 0 84 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="4" y1="0" x2="84" y2="0"></line><line class="line-element" stroke="#cccccc" stroke-width="2" x1="4" y1="0" x2="84" y2="0"></line><polygon fill="#cccccc" transform="translate(4,0) rotate(90)" points="0,4 4,-4 -4,-4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 400px; top: 350px;" data-block-id="7174fed105556586aabfb472b5c662ad" data-name="line-a35863"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="80" data-line-y2="0" data-line-color="#cccccc" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 22;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="80" height="1" viewbox="0 0 80 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="4" y1="0" x2="80" y2="0"></line><line class="line-element" stroke="#cccccc" stroke-width="2" x1="4" y1="0" x2="80" y2="0"></line><polygon fill="#cccccc" transform="translate(4,0) rotate(90)" points="0,4 4,-4 -4,-4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 598px; top: 350px;" data-block-id="72f9a045443e22d616ba7d905fb2ad91" data-name="line-3de79b"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="84" data-line-y2="0" data-line-color="#cccccc" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 23;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="84" height="1" viewbox="0 0 84 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="4" y1="0" x2="84" y2="0"></line><line class="line-element" stroke="#cccccc" stroke-width="2" x1="4" y1="0" x2="84" y2="0"></line><polygon fill="#cccccc" transform="translate(4,0) rotate(90)" points="0,4 4,-4 -4,-4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 118px; height: 46px; left: 682px; top: 234px;" data-block-id="9bf165ee40d3cadf56ec2fac9d6ac4ee" data-name="shape-5513e2"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(204, 0, 0)" data-shape-stretch="true" style="z-index: 24;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 118 46"><rect width="118" height="46" rx="0" ry="0" class="shape-element" fill="rgb(204, 0, 0)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 118px; height: 46px; left: 682px; top: 560px;" data-block-id="38367b74dbc53694a63263bc636a67bf" data-name="shape-40b84e"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(204, 0, 0)" data-shape-stretch="true" style="z-index: 25;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 118 46"><rect width="118" height="46" rx="0" ry="0" class="shape-element" fill="rgb(204, 0, 0)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 741px; top: 280px;" data-block-id="e2af20d06a0735052c4da752db973340" data-name="line-8463aa"><div class="sl-block-content" data-line-x1="0" data-line-y1="47" data-line-x2="0" data-line-y2="0" data-line-color="#cccccc" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 26;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="47" viewbox="0 0 1 47"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="43" x2="0" y2="0"></line><line class="line-element" stroke="#cccccc" stroke-width="2" x1="0" y1="43" x2="0" y2="0"></line><polygon fill="#cccccc" transform="translate(0,43) rotate(0)" points="0,4 4,-4 -4,-4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 741px; top: 513px;" data-block-id="c4e676e78e848121a291fb9b174c4c85" data-name="line-897145"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="0" data-line-y2="47" data-line-color="#cccccc" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 27;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="47" viewbox="0 0 1 47"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="4" x2="0" y2="47"></line><line class="line-element" stroke="#cccccc" stroke-width="2" x1="0" y1="4" x2="0" y2="47"></line><polygon fill="#cccccc" transform="translate(0,4) rotate(180)" points="0,4 4,-4 -4,-4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 118px; height: 46px; left: 282px; top: 234px;" data-block-id="9947e01a2bf31ebe7cfa18f30dbde13c" data-name="shape-1f8a21"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(234, 153, 153)" data-shape-stretch="true" style="z-index: 28;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 118 46"><rect width="118" height="46" rx="0" ry="0" class="shape-element" fill="rgb(234, 153, 153)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-7d8873" data-block-id="c9bcb6d288cde02b56c2e74404daf8e6" style="height: auto; width: 118px; left: 682px; top: 224px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 29;">
+<h3><span style="font-size:0.5em">branch</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 118px; left: 682px; top: 550px;" data-block-id="bf98dafc4b2843e86c6d153e19aed6d6" data-name="text-ca6e9f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 30;">
+<h3><span style="font-size:0.5em">MAIN</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 118px; left: 282px; top: 224px;" data-block-id="91f36b1cee0f2c3ae8c2370bc999e5f0" data-name="text-aee004"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 31;">
+<h3><span style="font-size:0.5em">HEAD</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 341px; top: 280px;" data-block-id="5ab65abd28f38d78873e95f668dfd31e" data-name="line-9a5a12"><div class="sl-block-content" data-line-x1="0" data-line-y1="47" data-line-x2="0" data-line-y2="0" data-line-color="#cccccc" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 32;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="47" viewbox="0 0 1 47"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="43" x2="0" y2="0"></line><line class="line-element" stroke="#cccccc" stroke-width="2" x1="0" y1="43" x2="0" y2="0"></line><polygon fill="#cccccc" transform="translate(0,43) rotate(0)" points="0,4 4,-4 -4,-4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 118px; left: 80px; top: 467px;" data-block-id="cee3b23ab8ad884dc3f5ead49e203292" data-name="text-7dc8f7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 33;">
+<pre style="text-align:center"><span style="font-size:0.7em">0sjw3a</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 118px; left: 282px; top: 467px;" data-block-id="3bca31fe50fb2619473c8196a48a812e" data-name="text-f3f2dc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 34;">
+<pre style="text-align:center"><span style="font-size:0.7em">j3b4j2</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 118px; left: 480px; top: 467px;" data-block-id="052de631f2f42ade0c216691717daeca" data-name="text-c9199c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 35;">
+<pre style="text-align:center"><span style="font-size:0.7em">d9jw7s</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 118px; left: 682px; top: 467px;" data-block-id="7c7157874e264173a542b73821a8ae91" data-name="text-f0a400"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 36;">
+<pre style="text-align:center"><span style="font-size:0.7em">4j3n2h</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 118px; left: 682px; top: 327px;" data-block-id="629cfeff4ea05e5599d697ac340afd99" data-name="text-9e6c41"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 37;">
+<pre style="text-align:center"><span style="font-size:0.7em">9kwjcu</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 118px; left: 480px; top: 327px;" data-block-id="7fee7be583a1e6d758754c660a18a66e" data-name="text-b9c9a2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 38;">
+<pre style="text-align:center"><span style="font-size:0.7em">2ksjh7</span></pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 118px; left: 282px; top: 327px;" data-block-id="9cc3045df714538905a0568014e77882" data-name="text-11bf2b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 39;">
+<pre style="text-align:center"><span style="font-size:0.7em">js87sj</span></pre>
+</div></div></section><section data-id="5cb170a92219fa07a84e597b7f4abf9b"><div class="sl-block" data-block-type="image" data-name="image-e5c4a6" data-block-id="4bf42daf77e9b0e8a179353ad54723df" style="width: 558.678px; height: 322.502px; left: 230px; top: 237.498px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="686" data-natural-height="396" data-lazy-loaded="" data-src="version-control-for-scientists/bb59fd6fbc904aebc8750967bbddffa1.png"></div></div>
+<div class="sl-block" data-block-type="shape" data-name="shape-d1f44b" data-block-id="edd38e0a7e5a260cff8d62aae9b7856e" style="width: 640px; height: 430px; left: 160px; top: 187px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 10;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 640 430"><rect width="640" height="430" rx="0" ry="0" class="shape-element" fill="rgb(255, 255, 255)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-acd103" data-block-id="7336a6cc6ca6e7e526060109089f15c9" style="height: auto; width: 600px; left: 180px; top: 90px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3>3 "trees"</h3>
+</div></div></section><section data-id="cc87df93cd49918dcf1486701c1067be"><div class="sl-block" data-block-type="text" data-name="text-75f893" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="d25def47a4c108d4fe8fc0b29cded50e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<h3>distributed version control system</h3>
+</div></div>
+<div class="sl-block" data-block-type="shape" data-name="shape-bf4e16" data-block-id="866c23048e9fe86ce4c3ad4f09e82a06" style="width: 80px; height: 80px; left: 211px; top: 357px;"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(238, 238, 238)" data-shape-stretch="true" style="z-index: 18;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 80 80"><ellipse rx="40" ry="40" cx="40" cy="40" class="shape-element" fill="rgb(238, 238, 238)"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 80px; left: 400px; top: 224px;" data-block-id="c539c2a1c8f4d96f4387bb3f05707944" data-name="shape-d77f2c"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(238, 238, 238)" data-shape-stretch="true" style="z-index: 19;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 80 80"><ellipse rx="40" ry="40" cx="40" cy="40" class="shape-element" fill="rgb(238, 238, 238)"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 80px; left: 352px; top: 560px;" data-block-id="65249770dc510a063d036be1ea902cdb" data-name="shape-cf98d1"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(238, 238, 238)" data-shape-stretch="true" style="z-index: 20;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 80 80"><ellipse rx="40" ry="40" cx="40" cy="40" class="shape-element" fill="rgb(238, 238, 238)"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 80px; left: 586px; top: 331px;" data-block-id="434bcdd348e5c9a67920e30573140cb8" data-name="shape-07f96c"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(238, 238, 238)" data-shape-stretch="true" style="z-index: 21;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 80 80"><ellipse rx="40" ry="40" cx="40" cy="40" class="shape-element" fill="rgb(238, 238, 238)"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 80px; left: 529px; top: 500px;" data-block-id="5a05f1389db130451927fd806d56ffec" data-name="shape-b7aeba"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(238, 238, 238)" data-shape-stretch="true" style="z-index: 22;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 80 80"><ellipse rx="40" ry="40" cx="40" cy="40" class="shape-element" fill="rgb(238, 238, 238)"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="line" data-name="line-e93248" data-block-id="0e58a993ab9cdb3213287372b9453b61" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 277px; top: 280px;"><div class="sl-block-content" data-line-x1="0" data-line-y1="91" data-line-x2="123" data-line-y2="0" data-line-color="#eeeeee" data-line-start-type="none" data-line-end-type="none" style="z-index: 23;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="123" height="91" viewbox="0 0 123 91"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="91" x2="123" y2="0"></line><line class="line-element" stroke="#eeeeee" stroke-width="2" x1="0" y1="91" x2="123" y2="0"></line></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 586px; top: 409px;" data-block-id="14eb9606e78a51c7e912a92c2521c4a1" data-name="line-d744af"><div class="sl-block-content" data-line-x1="0" data-line-y1="91" data-line-x2="29" data-line-y2="0" data-line-color="#eeeeee" data-line-start-type="none" data-line-end-type="none" style="z-index: 24;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="29" height="91" viewbox="0 0 29 91"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="91" x2="29" y2="0"></line><line class="line-element" stroke="#eeeeee" stroke-width="2" x1="0" y1="91" x2="29" y2="0"></line></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 432px; top: 547.5px;" data-block-id="f2bb3e9c5fa7d8d18a4caa1592bd60b7" data-name="line-252c71"><div class="sl-block-content" data-line-x1="0" data-line-y1="38" data-line-x2="97" data-line-y2="0" data-line-color="#eeeeee" data-line-start-type="none" data-line-end-type="none" style="z-index: 25;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="97" height="38" viewbox="0 0 97 38"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="38" x2="97" y2="0"></line><line class="line-element" stroke="#eeeeee" stroke-width="2" x1="0" y1="38" x2="97" y2="0"></line></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 400px; top: 295px;" data-block-id="7640c254f203427200a334d706b50e16" data-name="line-f5b12f"><div class="sl-block-content" data-line-x1="0" data-line-y1="265" data-line-x2="28" data-line-y2="0" data-line-color="#eeeeee" data-line-start-type="none" data-line-end-type="none" style="z-index: 26;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="28" height="265" viewbox="0 0 28 265"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="265" x2="28" y2="0"></line><line class="line-element" stroke="#eeeeee" stroke-width="2" x1="0" y1="265" x2="28" y2="0"></line></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 414px; top: 304px;" data-block-id="1626af4061e7d273d0ece36b0a0e2f50" data-name="line-6152ed"><div class="sl-block-content" data-line-x1="0" data-line-y1="262.5" data-line-x2="26" data-line-y2="0" data-line-color="#eeeeee" data-line-start-type="none" data-line-end-type="none" style="z-index: 27;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="26" height="262.5" viewbox="0 0 26 262.5"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="262.5" x2="26" y2="0"></line><line class="line-element" stroke="#eeeeee" stroke-width="2" x1="0" y1="262.5" x2="26" y2="0"></line></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 277px; top: 427.5px;" data-block-id="b1723e6327034179827b85c27d197413" data-name="line-5a69d1"><div class="sl-block-content" data-line-x1="123" data-line-y1="132.5" data-line-x2="0" data-line-y2="0" data-line-color="#eeeeee" data-line-start-type="none" data-line-end-type="none" style="z-index: 28;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="123" height="132.5" viewbox="0 0 123 132.5"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="123" y1="132.5" x2="0" y2="0"></line><line class="line-element" stroke="#eeeeee" stroke-width="2" x1="123" y1="132.5" x2="0" y2="0"></line></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 419px; top: 381.5px;" data-block-id="5f6601e2f3d5c572fd924724d69dacd6" data-name="line-541095"><div class="sl-block-content" data-line-x1="0" data-line-y1="185" data-line-x2="167" data-line-y2="0" data-line-color="#eeeeee" data-line-start-type="none" data-line-end-type="none" style="z-index: 29;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="167" height="185" viewbox="0 0 167 185"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="185" x2="167" y2="0"></line><line class="line-element" stroke="#eeeeee" stroke-width="2" x1="0" y1="185" x2="167" y2="0"></line></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 471px; top: 280px;" data-block-id="8d944c597c27c4c2e114661943650902" data-name="line-304128"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="122" data-line-y2="70" data-line-color="#eeeeee" data-line-start-type="none" data-line-end-type="none" style="z-index: 30;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="122" height="70" viewbox="0 0 122 70"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="122" y2="70"></line><line class="line-element" stroke="#eeeeee" stroke-width="2" x1="0" y1="0" x2="122" y2="70"></line></svg></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-78ecea" data-block-id="b572a8d0572b1a28c0a9fb991f0b1b67" style="width: 66.5px; height: 66.5px; left: 173.5px; top: 315px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="1024" data-natural-height="1024" data-lazy-loaded="" data-src="version-control-for-scientists/68389bd6b1b46e1cdbe5f6325d8f0b60.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 66.5px; height: 66.5px; left: 312.5px; top: 600px; min-width: 1px; min-height: 1px;" data-block-id="67ef30bdd73f6f042bc070940115fe94" data-name="image-e8bdfd"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="1024" data-natural-height="1024" data-lazy-loaded="" data-src="version-control-for-scientists/68389bd6b1b46e1cdbe5f6325d8f0b60.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 66.5px; height: 66.5px; left: 352.5px; top: 197.5px; min-width: 1px; min-height: 1px;" data-block-id="d30225f5c0d38c533fd5f3af9df31228" data-name="image-5b61dd"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="1024" data-natural-height="1024" data-lazy-loaded="" data-src="version-control-for-scientists/68389bd6b1b46e1cdbe5f6325d8f0b60.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 66.5px; height: 66.5px; left: 575.75px; top: 560px; min-width: 1px; min-height: 1px;" data-block-id="4bee81d5266eba5e442b27566c57c88d" data-name="image-294e20"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="1024" data-natural-height="1024" data-lazy-loaded="" data-src="version-control-for-scientists/68389bd6b1b46e1cdbe5f6325d8f0b60.png"></div></div>
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-5ab850" data-block-id="54464fe2d8992d25479d0b08ad35740c"><div class="sl-block-content sl-block-group-content" style="transform-origin: 670.25px 329px; z-index: 10;">
+<div class="sl-block" data-block-type="image" data-name="image-deeb91" data-block-id="26934a58f10612b53277e83ddf04eef7" style="width: 53.4831px; height: 53.4831px; left: 643.508px; top: 302.258px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1024" data-natural-height="1024" style="" data-lazy-loaded="" data-src="version-control-for-scientists/9b6e4365a110f7bc398e4d6a04ccb01c.png"></div></div>
+<div class="sl-block" data-block-type="shape" data-name="shape-d6325d" data-block-id="7b7a1e9d9e520c6ff07aedb9c9bb33a8" style="width: 56px; height: 56px; left: 642.25px; top: 301px;"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 56 56"><ellipse rx="28" ry="28" cx="28" cy="28" class="shape-element" fill="rgb(255, 255, 255)"></ellipse></svg></div></div>
+</div></div></section><section data-id="f83b30730a0f6037d8446ffbd4ce9fd1"><div class="sl-block" data-block-type="text" data-name="text-75f893" style="height: auto; width: 600px; left: 180px; top: 70px;" data-block-id="511ff7cf9d061e60d547c89696cba9cd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h2>github</h2>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 80px; left: 307px; top: 376px;" data-name="shape-d77f2c" data-block-id="2b64cad69581e7b618e0f6e40d3a458e"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(238, 238, 238)" data-shape-stretch="true" style="z-index: 17;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 80 80"><ellipse rx="40" ry="40" cx="40" cy="40" class="shape-element" fill="rgb(238, 238, 238)"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 80px; left: 569px; top: 376px;" data-name="shape-07f96c" data-block-id="a4e89860ef12b17e72567492bd39df46"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(238, 238, 238)" data-shape-stretch="true" style="z-index: 18;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 80 80"><ellipse rx="40" ry="40" cx="40" cy="40" class="shape-element" fill="rgb(238, 238, 238)"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 387px; top: 416px;" data-name="line-304128" data-block-id="d8d69aef174288265bee43826cddd7ec"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="182" data-line-y2="0" data-line-color="#eeeeee" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 19;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="182" height="1" viewbox="0 0 182 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="180" y2="0"></line><line class="line-element" stroke="#eeeeee" stroke-width="2" x1="0" y1="0" x2="180" y2="0"></line><path style="fill: rgba(0,0,0,0);" stroke="#eeeeee" stroke-width="2" transform="translate(180,0) rotate(90)" d="M 6 6 L 0 0 L -6 6"></path></svg></div></div>
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-5ab850" data-block-id="97d1ae90281fff057fb6b295e78ae642"><div class="sl-block-content sl-block-group-content" style="transform-origin: 569px 368.5px; z-index: 14;">
+<div class="sl-block" data-block-type="image" data-name="image-deeb91" style="width: 53.4831px; height: 53.4831px; left: 542.258px; top: 341.758px; min-width: 1px; min-height: 1px;" data-origin-id="26934a58f10612b53277e83ddf04eef7" data-block-id="d7d0f474c62ecfe48aecde1590a9c215"><div class="sl-block-content" style="z-index: 16;"><img data-natural-width="1024" data-natural-height="1024" style="" data-lazy-loaded="" data-src="version-control-for-scientists/9b6e4365a110f7bc398e4d6a04ccb01c.png"></div></div>
+<div class="sl-block" data-block-type="shape" data-name="shape-d6325d" style="width: 56px; height: 56px; left: 541px; top: 340.5px;" data-origin-id="7b7a1e9d9e520c6ff07aedb9c9bb33a8" data-block-id="65cd07ee41f878e1b0a6b464661e69b2"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 15;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 56 56"><ellipse rx="28" ry="28" cx="28" cy="28" class="shape-element" fill="rgb(255, 255, 255)"></ellipse></svg></div></div>
+</div></div>
+<div class="sl-block sl-block-group" data-block-type="group" data-block-id="d74d0c4550bcc9154597f53d19c52275" data-name="group-334b18"><div class="sl-block-content sl-block-group-content" style="transform-origin: 387px 370px; z-index: 10;">
+<div class="sl-block" data-block-type="image" style="width: 53.4831px; height: 53.4831px; left: 360.258px; top: 343.258px; min-width: 1px; min-height: 1px;" data-origin-id="d7d0f474c62ecfe48aecde1590a9c215" data-block-id="8dc5451e3da1c215dc085a2249921ef2" data-name="image-df881e"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="1024" data-natural-height="1024" style="" data-lazy-loaded="" data-src="version-control-for-scientists/9b6e4365a110f7bc398e4d6a04ccb01c.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 56px; height: 56px; left: 359px; top: 342px;" data-origin-id="65cd07ee41f878e1b0a6b464661e69b2" data-block-id="cf85542f73ad9e23f4c56986ff20697a" data-name="shape-8e638a"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 56 56"><ellipse rx="28" ry="28" cx="28" cy="28" class="shape-element" fill="rgb(255, 255, 255)"></ellipse></svg></div></div>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-e91ea8" data-block-id="0e8df2b9d1d1364581efed50510f9dde" style="height: auto; width: 600px; left: 182.5px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20;">
+<h3>forks &amp; Pull Requests</h3>
+</div></div>
+<div class="sl-block" data-block-type="shape" data-name="shape-27beb3" data-block-id="73d6782473cec337285b858ec6e51d6e" style="width: 92px; height: 124px; left: 301px; top: 518px;"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(74, 134, 232)" data-shape-stretch="true" style="z-index: 21;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 92 124"><rect width="92" height="124" rx="0" ry="0" class="shape-element" fill="rgb(74, 134, 232)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-b5f3d8" data-block-id="85923edbcd40b0d1ade748af9031ec10" style="height: auto; width: 115px; left: 182.5px; top: 400.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22;">
+<p style="text-align: right;">parent</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 115px; left: 662.5px; top: 395.241px;" data-block-id="b47cb0dad6e7f76371d89a7ef701fcff" data-name="text-e4c398"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23;">
+<p style="text-align: left;">fork</p>
+</div></div>
+<div class="sl-block" data-block-type="line" data-name="line-7c5096" data-block-id="13868509324de5d4abe85c7893fa9cec" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 393px; top: 456px;"><div class="sl-block-content" data-line-x1="0" data-line-y1="124" data-line-x2="216" data-line-y2="0" data-line-color="#4a86e8" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 24;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="216" height="124" viewbox="0 0 216 124"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="3.46901238733923" y1="122.00852992578673" x2="216" y2="0"></line><line class="line-element" stroke="#4a86e8" stroke-width="2" x1="3.46901238733923" y1="122.00852992578673" x2="216" y2="0"></line><polygon fill="#4a86e8" transform="translate(3.46901238733923,122.00852992578673) rotate(60.141)" points="0,4 4,-4 -4,-4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 347px; top: 456px;" data-block-id="445490a8e6ae5fcc59e3b708d0255ffb" data-name="line-a5db9d"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="0" data-line-y2="68" data-line-color="#4a86e8" data-line-start-type="arrow" data-line-end-type="none" style="z-index: 25;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1" height="68" viewbox="0 0 1 68"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="4" x2="0" y2="68"></line><line class="line-element" stroke="#4a86e8" stroke-width="2" x1="0" y1="4" x2="0" y2="68"></line><polygon fill="#4a86e8" transform="translate(0,4) rotate(180)" points="0,4 4,-4 -4,-4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-e90ea7" data-block-id="3cd644700787d0287efc435ed0158125" style="height: auto; width: 88px; left: 303px; top: 560px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 26;">
+<p>PR</p>
+</div></div></section><section data-id="d132dcf1114ad9f2e81cab6abbf3b620"><div class="sl-block" data-block-type="text" data-name="text-593b0c" style="height: auto; width: 515px; left: 80px; top: 70px;" data-block-id="8e9e4a57030b00297a798867869695c9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Questions Answered:</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-e3bd2e" style="height: auto; width: 760px; left: 120px; top: 171px;" data-block-id="fbefc5f91d37d1217001f52003496ca9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left"><em>Q:</em> <em>What is a fork?</em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-bb4880" style="height: auto; width: 600px; left: 120px; top: 241px;" data-block-id="91b7597c00d55c87f740a0b6bc1e4934"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left"><em>Q: What is a pull request?</em></p>
+</div></div></section></section><section class="stack" data-id="dafce088d1bd4174ad88886ab9c0a63a"><section data-id="f1b02f258de9e15c4698c7ebd3b9e8cd"><div class="sl-block" data-block-type="text" data-name="text-de18ee" data-block-id="96d1eb9bf1fa2b9a9fb891bf66e7a2c9" style="height: auto; width: 600px; left: 180px; top: 66px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>git up close</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-7bbb71" data-block-id="e2c1c48cbb01d4307f174d63823dda55" style="height: auto; width: 600px; left: 180px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>walk through building out a toy repository</h3>
+</div></div></section><section data-id="b302345a4f216a48c93aa423fd52e50e"><div class="sl-block" data-block-type="text" data-name="text-9b76bb" data-block-id="5e3fc28e50aa03acbe733f79caf32992" style="height: auto; width: 600px; left: 180px; top: 90px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>git config &amp; INIT</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-869ed0" data-block-id="fcbdee373f375af68353a7a9ce21d23f" style="width: 640px; height: 364px; left: 160px; top: 196px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 22px; line-height: 26px;"><code data-line-numbers="">git config
+
+git config --global --list
+
+git config user.name Steve Purves
+
+git config --global user.name Steve Purves
+
+git init
+
+git config user.name Steve Local
+
+git config --list
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-41ea05" data-block-id="0a4a8cfbacd126dc12a78d72ea3b5551" style="height: auto; width: 600px; left: 180px; top: 630px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><em>Q: How to tell git to forget my repo?</em></p>
+</div></div></section><section data-id="d4656818be1f29639b79986d1e53e5ac"><div class="sl-block" data-block-type="code" data-name="code-201f41" data-block-id="05606ee652d8d8a604b7ff4209adb71a" style="width: 800px; height: 71px; left: 80px; top: 314.5px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 10;"><pre style="font-size: 16px; line-height: 19px;"><code data-line-numbers="">git config --global alias.graph 'git log --graph --oneline --decorate --all'
+
+git config --global --unset alias.graph
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-9b76bb" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="b4b451ddfea2f134527cf574473b5f56"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>git ALIAS</h3>
+</div></div></section><section data-id="fc8095ba1bef169f077501451922b020"><div class="sl-block" data-block-type="text" data-name="text-9b76bb" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="9d52c2ea190c039cbedf5daf38aeb330"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>start commiting</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-b90271" data-block-id="a1e9ccc4262a320f659342dbba996d4e" style="width: 640px; height: 395px; left: 160px; top: 210px;"><div class="sl-block-style" style="z-index: 11; transform: rotate(0deg);"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 23px; line-height: 28px;"><code data-line-numbers="">git branch -m master main
+
+git add
+
+git rm
+
+git commit
+
+git log
+
+git log --graph --oneline --decorate --all
+
+git diff</code></pre></div></div></div></section><section data-id="512602fcd3da9b92bdbe951ac336004c"><div class="sl-block" data-block-type="text" data-name="text-9b76bb" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="e7d4f2bafa9fd62d936b7831dab5a71d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>TAG &amp; BRANCH</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-7779eb" data-block-id="65e8697344551a78229e4ba309646ef8" style="width: 640px; height: 302px; left: 160px; top: 210px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 24px; line-height: 29px;"><code data-line-numbers="">git show-refs
+
+git tag
+
+git branch
+
+git merge
+</code></pre></div></div></section><section data-id="2ece428d4582642f78a2d6a9b6ec36de"><div class="sl-block" data-block-type="text" data-name="text-9b76bb" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="68db6adcc28f3622328d2c27fdba3f8a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>CONFLICTS</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-8b0b9d" data-block-id="4d4f2c1351514ea0d23e529e5034033f" style="height: auto; width: 600px; left: 180px; top: 287.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 500%;">
+<p>💥</p>
+</div></div></section><section data-id="678571b499b430907370166da2d64823"><div class="sl-block" data-block-type="text" data-name="text-593b0c" style="height: auto; width: 515px; left: 80px; top: 70px;" data-block-id="aea2f30d1cb87cfc241942c565dc65a4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Questions Answered:</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-e3bd2e" style="height: auto; width: 760px; left: 120px; top: 152.5px;" data-block-id="bd9ced2761c6526a108b1e58e35ddcf7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left"><em>Q: What is the minimum I need to know to use git alone?</em></p>
+</div></div></section></section><section class="stack" data-id="cf6454bf9578ec3eb5dda784a19a05ce"><section data-id="8a262e1a6b85978d05ad022ac8271be6"><div class="sl-block" data-block-type="text" data-name="text-de18ee" style="height: auto; width: 600px; left: 180px; top: 66px;" data-block-id="2bd51fd06c64435592132effbc52d8da"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>git LEVEL 2</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-7bbb71" style="height: auto; width: 600px; left: 180px; top: 280px;" data-block-id="6e8df23e59ba77f7b95cfcbb1d868e5b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3 style="color:rgb(255, 255, 255)">STASH</h3>
+
+<h3 style="color:rgb(255, 255, 255)">RESET || REVERT</h3>
+
+<h3>rebase</h3>
+
+<h3>commit --amend</h3>
+</div></div></section><section data-id="57630a797836d70208896aff47174126"><div class="sl-block" data-block-type="text" data-name="text-794293" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="52d03b300a39c1bae994ea275bea2d7f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>the stash</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-d4278f" data-block-id="f19c2c78807c753dba49ce2585957a53" style="width: 719px; height: 397px; left: 132px; top: 210px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 19px; line-height: 23px;"><code data-line-numbers="">git stash [push]
+
+git stash pop
+
+git stash list
+
+---
+
+git stash push -m "stash_name"
+
+git stash pop stash@{n}
+
+git stash apply stash@{n}
+
+git stash branch &lt;branchname&gt; [stash@{n}]
+</code></pre></div></div></section><section data-id="f6b8730dd706ef05c30ed365bed6058a"><div class="sl-block" data-block-type="text" data-name="text-794293" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="b3d51552416616881d03388ae83908b1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>RESET | REVERT</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-36d344" data-block-id="3a828113ae6c248fd2aedf3d4fa8126a" style="width: 629px; height: 119px; left: 160px; top: 210px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 24px; line-height: 29px;"><code data-line-numbers="">git reset --hard HEAD
+
+git reset --keep HEAD
+</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 629px; height: 119px; left: 160px; top: 392px;" data-block-id="3de51ecf7ba993b806e1171433645740" data-name="code-d91745"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre style="font-size: 24px; line-height: 29px;"><code data-line-numbers="">git revert &lt;commit&gt;
+</code></pre></div></div></section><section data-id="06a0216cb3106dbc0fcd89e2ff5d9e5f"><div class="sl-block" data-block-type="text" data-name="text-794293" data-block-id="8bcd73b1b394899cb6257503f447ab8d" style="height: auto; width: 600px; left: 180px; top: 90px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>rebase</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-7b1a7a" data-block-id="230865562189533fa39219cd6e9a75cd" style="width: 640px; height: 213px; left: 160px; top: 210px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 22px; line-height: 26px;"><code data-line-numbers="">// setup a branch with changes
+
+git checkout -b branch2
+
+// commit commit commit
+
+git rebase main
+
+git rebase main branch2
+
+// do it again with conflicts</code></pre></div></div></section><section data-id="357fe962189c39a86d3b5611c948a18c"><div class="sl-block" data-block-type="text" data-name="text-794293" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="b175870d960716a49c7fc934e49bb140"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>rebase ONTO</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-7b1a7a" style="width: 753px; height: 121px; left: 103.5px; top: 299px;" data-block-id="9631e49ac9e253ed2c11e292b089e1d4"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 22px; line-height: 26px;"><code data-line-numbers="">
+git rebase --onto &lt;newparent&gt; &lt;start&gt; &lt;branch&gt;
+
+</code></pre></div></div></section><section data-id="1c0c563b6e3a3f132a10c3a1434c5713"><div class="sl-block" data-block-type="text" data-name="text-794293" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="f626bcc492cd4d91070bea5bb74fed89"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>commit ammend</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-a22065" data-block-id="c12b14ebc96ed102c6fdf85353ee7be7" style="width: 640px; height: 147px; left: 160px; top: 280px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 24px; line-height: 29px;"><code data-line-numbers="">git commit --amend -m "my new message"
+
+// you are rewriting history!
+</code></pre></div></div></section></section><section data-id="95e48fa335380bccbe3f31c049e38342"><div class="sl-block" data-block-type="text" data-name="text-d9a059" data-block-id="44d9d023fd7733d1c00227fac15dc07f" style="height: auto; width: 600px; left: 180px; top: 306px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>DIVE INTO VSCODE</h2>
+</div></div></section><section class="stack" data-id="03ab0a6d244fcc2d2c9271f57e589ebb"><section data-id="465918e52da134734e1997291e25937b"><div class="sl-block" data-block-type="text" data-name="text-baf6b1" data-block-id="ea120f3b298ecd7d0b837fd4f25b42e2" style="height: auto; width: 600px; left: 180px; top: 272px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>getting my code onto github</h2>
+</div></div></section><section data-id="fd79ad4cb357d34be6a3ef08c767e8ed"><div class="sl-block" data-block-type="text" data-name="text-bb8db5" data-block-id="6d887cd42e36842768aa6e7ffa58f3f4" style="height: auto; width: 600px; left: 180px; top: 90px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>remeMber</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 171px;" data-block-id="c60dddac222fd67d7046387f2bc6f977" data-name="text-0fb2c1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><em>A GitHub repo is just a copy of your git repo on someone else's (Mircosoft's) computer</em></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-9cd327" data-block-id="708fc357a99d73e002e7dd611760d28d" style="width: 640px; height: 350px; left: 160px; top: 280px;"><div class="sl-block-style" style="z-index: 12; transform: rotate(0deg);"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre style="font-size: 19px; line-height: 23px;"><code data-line-numbers="">cd ..
+mkdir repo_two
+cd repo_two
+
+git init --bare
+
+cd ../repo_one
+
+// make a change
+git commit -am "changes"
+
+git push ../repo_two
+
+git remote add local ~dev/t21/repo_two
+</code></pre></div></div></div></section><section data-id="a6838035df674a9f4fbeb62672d962d4"><div class="sl-block" data-block-type="text" data-name="text-baf6b1" style="height: auto; width: 800px; left: 80px; top: 90px;" data-block-id="bb075388e0dd39c0029fe5fd6aff6aaa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>you already have a repo locally*</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-899043" data-block-id="d8ff99fdbffe63a40c4e000104d12bc3" style="width: 640px; height: 342px; left: 160px; top: 210px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 22px; line-height: 26px;"><code data-line-numbers="">git remote add origin _____________
+
+git push -u origin main
+
+git checkout -b my-branch
+
+git push
+
+git tag 'v1.0.1'
+
+git push --tags
+
+</code></pre></div></div></section></section><section data-id="170b277a4bdb4fe3d045bb5c26bf75c8"><div class="sl-block" data-block-type="image" data-name="image-4caac6" data-block-id="fccf5603410296d14335cf7fdf59e482" style="width: 806.4px; height: 514.907px; left: 76.8px; top: 92.5465px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1682" data-natural-height="1074" data-lazy-loaded="" data-src="version-control-for-scientists/588e20fc88e0f16f3be86b904f855f69.png"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-97b198" data-block-id="a75781e2cca5e0eca385b8b6e7a3a2fa" style="width: 806.399px; height: 502.793px; left: 76.8005px; top: 98.6035px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1838" data-natural-height="1146" data-lazy-loaded="" data-src="version-control-for-scientists/bff43bca102b09cc13ba6cc5f2e6b556.png"></div></div></section><section class="stack" data-id="91e0239f78e708703038e56262d5e473"><section data-id="c70098f41fda2a96cb2d663afd54397b"><div class="sl-block" data-block-type="text" data-name="text-92ef3c" data-block-id="4264ec3ccdf2b94406bfd65f72528cc0" style="height: auto; width: 600px; left: 180px; top: 62px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>working with others</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-b3b85d" data-block-id="6f271a3871a1123d27fe51608e83d1f1" style="height: auto; width: 600px; left: 180px; top: 290.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ol>
+	<li>
+	<h3>publishing</h3>
+	</li>
+	<li>
+	<h3>contributing</h3>
+	</li>
+</ol>
+</div></div></section><section data-id="45d3791a176ecf81bed20dca88a0dcde"><div class="sl-block" data-block-type="text" data-name="text-085b72" data-block-id="72b037118bc25c6febaa0dd4b147105a" style="height: auto; width: 600px; left: 180px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>publishing</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 155px;" data-name="text-0fb2c1" data-block-id="63ec91bdf42e2799707121997459634a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><em>sharing your repo in any way is publishing</em></p>
+
+<p><em>pushing to a public repo on github / gitlab etc... is the most common</em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 726px; left: 112px; top: 323px;" data-block-id="4a70cf88eb7ea56e4dc2ae5b9e3eab6a" data-name="text-5ff373"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><em>once you publish beware of `rewriting history`</em></p>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-906065" data-block-id="d4ebab0774fb4a00fc81d391ed7f7d05" style="width: 586px; height: 158px; left: 186px; top: 420px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;"><pre style="font-size: 20px; line-height: 24px;"><code data-line-numbers="">git commit --amend -m "my corrected message"
+
+git rebase main
+
+git reset
+</code></pre></div></div></section><section data-id="bac34d9b745ab20de2ec80798a4226e6"><div class="sl-block" data-block-type="text" data-name="text-085b72" style="height: auto; width: 600px; left: 180px; top: 70px;" data-block-id="d24c5427c1fc8205a04b7da71c88e56c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>publishing</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-906065" style="width: 640px; height: 70px; left: 160px; top: 280px;" data-block-id="d89ab43f8d6ecb28693270f1d59a319e"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 13;"><pre style="font-size: 32px; line-height: 38px;"><code data-line-numbers="">git push --force-with-lease
+</code></pre></div></div></section><section data-id="15b83951ed404ca3c873ceda7ff4e3c6"><div class="sl-block" data-block-type="text" data-name="text-75f893" style="height: auto; width: 600px; left: 180px; top: 70px;" data-block-id="c1e609719de49746609429e3eb284d33"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h3>contributing</h3>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 80px; left: 279px; top: 226px;" data-name="shape-d77f2c" data-block-id="ac33e19f7acfe4d512e17c4a13bdb248"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(238, 238, 238)" data-shape-stretch="true" style="z-index: 18;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 80 80"><ellipse rx="40" ry="40" cx="40" cy="40" class="shape-element" fill="rgb(238, 238, 238)"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 80px; left: 595.741px; top: 226px;" data-name="shape-07f96c" data-block-id="8f63bdc22d096dab398bc647fc3456f7"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(238, 238, 238)" data-shape-stretch="true" style="z-index: 19;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 80 80"><ellipse rx="40" ry="40" cx="40" cy="40" class="shape-element" fill="rgb(238, 238, 238)"></ellipse></svg></div></div>
+
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-5ab850" data-block-id="34cdd7f2a3de3727c85544062878e0ce"><div class="sl-block-content sl-block-group-content" style="transform-origin: 675.741px 218.741px; z-index: 15;">
+<div class="sl-block" data-block-type="image" data-name="image-deeb91" style="width: 53.4831px; height: 53.4831px; left: 648.999px; top: 191.999px; min-width: 1px; min-height: 1px;" data-block-id="4cc7fb037403ce242ea0a3b553da4dd8"><div class="sl-block-content" style="z-index: 17;"><img data-natural-width="1024" data-natural-height="1024" style="" data-lazy-loaded="" data-src="version-control-for-scientists/9b6e4365a110f7bc398e4d6a04ccb01c.png"></div></div>
+<div class="sl-block" data-block-type="shape" data-name="shape-d6325d" style="width: 56px; height: 56px; left: 647.741px; top: 190.741px;" data-block-id="9ae049feeac6fd6c93a9d66960c83f3c"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 16;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 56 56"><ellipse rx="28" ry="28" cx="28" cy="28" class="shape-element" fill="rgb(255, 255, 255)"></ellipse></svg></div></div>
+</div></div>
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-334b18" data-block-id="220675bf6a434d17478e14330db2a96a"><div class="sl-block-content sl-block-group-content" style="transform-origin: 359px 220px; z-index: 11;">
+<div class="sl-block" data-block-type="image" style="width: 53.4831px; height: 53.4831px; left: 332.258px; top: 193.258px; min-width: 1px; min-height: 1px;" data-name="image-df881e" data-block-id="ef5d47f38cb6a4a4bdc20755cdbe69f4"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="1024" data-natural-height="1024" style="" data-lazy-loaded="" data-src="version-control-for-scientists/9b6e4365a110f7bc398e4d6a04ccb01c.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="width: 56px; height: 56px; left: 331px; top: 192px;" data-name="shape-8e638a" data-block-id="3bc7806acbeeaa0258acfd7a484f5028"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(255, 255, 255)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 56 56"><ellipse rx="28" ry="28" cx="28" cy="28" class="shape-element" fill="rgb(255, 255, 255)"></ellipse></svg></div></div>
+</div></div>
+
+<div class="sl-block" data-block-type="shape" data-name="shape-27beb3" style="width: 69.63px; height: 92px; left: 445.185px; top: 289.5px;" data-block-id="e26db919b8d63b45c88b1832c035aa5c"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(74, 134, 232)" data-shape-stretch="true" style="z-index: 20;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 70 92"><rect width="69.63" height="92" rx="0" ry="0" class="shape-element" fill="rgb(74, 134, 232)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-b5f3d8" style="height: auto; width: 115px; left: 154.5px; top: 250.5px;" data-block-id="e811b37f94a1d25145e40df0eb1a48d4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 21;">
+<p style="text-align:right">original</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 115px; left: 693.5px; top: 248px;" data-name="text-e4c398" data-block-id="9acc96e25630bf109f9424b429a43983"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 22;">
+<p style="text-align: left;">fork</p>
+</div></div>
+<div class="sl-block" data-block-type="line" data-name="line-7c5096" style="width: auto; height: auto; left: 514.815px; top: 289.5px;" data-block-id="c1c4ffe735488879216cc90f673dceac"><div class="sl-block-content" data-line-x1="0" data-line-y1="46" data-line-x2="89.18499999999995" data-line-y2="0" data-line-color="#4a86e8" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 23;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="89.18499999999995" height="46" viewbox="0 0 89.18499999999995 46"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="1.7774927928521844" y1="45.0832015644873" x2="89.18499999999995" y2="0"></line><line class="line-element" stroke="#4a86e8" stroke-width="2" x1="1.7774927928521844" y1="45.0832015644873" x2="89.18499999999995" y2="0"></line><path style="fill: rgba(0,0,0,0);" stroke="#4a86e8" stroke-width="2" transform="translate(1.7774927928521844,45.0832015644873) rotate(62.716)" d="M -6 -6 L 0 0 L 6 -6"></path></svg></div></div>
+
+<div class="sl-block" data-block-type="text" data-name="text-e90ea7" style="height: auto; width: 88px; left: 436px; top: 316px;" data-block-id="f2b4bb11088d0e7d8869abe76f1d76cf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 24;">
+<p>PR</p>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="width: 80px; height: 80px; left: 440px; top: 560px;" data-block-id="1333aab18b35c83916324dc94d741470" data-name="shape-c72df4"><div class="sl-block-content" data-shape-type="circle" data-shape-fill-color="rgb(238, 238, 238)" data-shape-stretch="true" style="z-index: 25;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 80 80"><ellipse rx="40" ry="40" cx="40" cy="40" class="shape-element" fill="rgb(238, 238, 238)"></ellipse></svg></div></div>
+<div class="sl-block" data-block-type="image" style="width: 47.5px; height: 47.5px; left: 500.25px; top: 616.25px; min-width: 1px; min-height: 1px;" data-name="image-5b61dd" data-block-id="cb68e4b8b8e611828f5ab792dcb3f471"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1024" data-natural-height="1024" data-lazy-loaded="" data-src="version-control-for-scientists/68389bd6b1b46e1cdbe5f6325d8f0b60.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 88px; left: 436px; top: 316px;" data-block-id="d6e189e8c1da5a7953ea39cf510ccac9" data-name="text-21afd9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 26;">
+<p>PR</p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 352px; top: 287px;" data-block-id="28392c4b7a444ea3619f2e13cf3d3f0f" data-name="line-89dd4f"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="93.185" data-line-y2="48.5" data-line-color="#4a86e8" data-line-start-type="line-arrow" data-line-end-type="none" style="z-index: 27;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="93.185" height="48.5" viewbox="0 0 93.185 48.5"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="1.7740921568210672" y1="0.9233618029277433" x2="93.185" y2="48.5"></line><line class="line-element" stroke="#4a86e8" stroke-width="2" x1="1.7740921568210672" y1="0.9233618029277433" x2="93.185" y2="48.5"></line><path style="fill: rgba(0,0,0,0);" stroke="#4a86e8" stroke-width="2" transform="translate(1.7740921568210672,0.9233618029277433) rotate(117.496)" d="M -6 -6 L 0 0 L 6 -6"></path></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 507.741px; top: 306px;" data-block-id="6dc1b50e6e132e49eb254e75f0e31950" data-name="line-597da5"><div class="sl-block-content" data-line-x1="0" data-line-y1="267" data-line-x2="128" data-line-y2="0" data-line-color="#eeeeee" data-line-start-type="none" data-line-end-type="arrow" style="z-index: 28;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="128" height="267" viewbox="0 0 128 267"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="267" x2="126.2708326476553" y2="3.606935024031516"></line><line class="line-element" stroke="#eeeeee" stroke-width="2" x1="0" y1="267" x2="126.2708326476553" y2="3.606935024031516"></line><polygon fill="#eeeeee" transform="translate(126.2708326476553,3.606935024031516) rotate(25.613)" points="0,-4 4,4 -4,4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 331px; top: 306px;" data-block-id="5ea8e40d307037f0f546ad669d70e732" data-name="line-262095"><div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="120" data-line-y2="267" data-line-color="#eeeeee" data-line-start-type="none" data-line-end-type="arrow" style="z-index: 29;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="120" height="267" viewbox="0 0 120 267"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="118.36024599589078" y2="263.351547340857"></line><line class="line-element" stroke="#eeeeee" stroke-width="2" x1="0" y1="0" x2="118.36024599589078" y2="263.351547340857"></line><polygon fill="#eeeeee" transform="translate(118.36024599589078,263.351547340857) rotate(155.799)" points="0,-4 4,4 -4,4"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 144px; left: 259px; top: 470.5px;" data-block-id="8e7200cdd7b1ef481fed9a6468406802" data-name="text-512f09"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 30;">
+<p style="text-align:right">upstream</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 144px; left: 563.741px; top: 470.5px;" data-block-id="f8d8330a84377501ce5cf9a7f38672a5" data-name="text-45ec4d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 31;">
+<p style="text-align: left;">origin</p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 359px; top: 266px;" data-block-id="7719b846ac042fe034a2f8c9239e23f3" data-name="line-ddd7b0"><div class="sl-block-content" data-line-x1="0" data-line-y1="1.5" data-line-x2="236.74099999999999" data-line-y2="0" data-line-color="#eeeeee" data-line-start-type="none" data-line-end-type="arrow" style="z-index: 32;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="236.74099999999999" height="1.5" viewbox="0 0 236.74099999999999 1.5"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="1.5" x2="232.74108028834064" y2="0.02534364376043445"></line><line class="line-element" stroke="#eeeeee" stroke-width="2" x1="0" y1="1.5" x2="232.74108028834064" y2="0.02534364376043445"></line><polygon fill="#eeeeee" transform="translate(232.74108028834064,0.02534364376043445) rotate(89.637)" points="0,-4 4,4 -4,4"></polygon></svg></div></div></section><section data-id="c6880b6c7aee7df0259a070b6da4137b"><div class="sl-block" data-block-type="text" data-name="text-085b72" style="height: auto; width: 600px; left: 180px; top: 70px;" data-block-id="abfad0f8a679541c9233b2df0bdd69e1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>contributing</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-a149fa" data-block-id="86323aa64f4cd44d6e462b0cf8e22b67" style="height: auto; width: 600px; left: 180px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left">Ideally:</p>
+
+<ol>
+	<li>make a fork</li>
+	<li>clone your fork</li>
+	<li>push to your fork</li>
+	<li>open a PR back to the main repo</li>
+	<li>configure upstream remote</li>
+</ol>
+</div></div></section><section data-id="3e5e47ec7b157db0d73e698c792c8dfd"><div class="sl-block" data-block-type="text" data-name="text-085b72" style="height: auto; width: 600px; left: 180px; top: 70px;" data-block-id="7a71b3dd67ee768ffb01dea4950b5af4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>contributing</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-a149fa" style="height: auto; width: 640px; left: 160px; top: 210px;" data-block-id="cfd3810a697ca4f3dc54c64d7fa96e3b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left">What usually happens:</p>
+
+<ol>
+	<li>clone the repo</li>
+	<li>end up making local changes</li>
+	<li>realise you want to contribute these back</li>
+	<li>create a fork</li>
+	<li>reconfigure local remotes</li>
+	<li>push to your fork</li>
+	<li>open a PR back to the main repo</li>
+</ol>
+</div></div></section><section data-id="bc93162a974e70a595b74eab819ef042"><div class="sl-block" data-block-type="text" data-name="text-085b72" style="height: auto; width: 600px; left: 180px; top: 70px;" data-block-id="c1585515144578581175469a3da3b3f2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>contributing - EXAMPLE</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-30f266" data-block-id="dd5e3b30b1a6a3925d87cd74244646d2" style="height: auto; width: 800px; left: 80px; top: 140px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<pre><a href="https://github.com/euclidity/t21-lorem-ipsum" target="_blank">https://github.com/euclidity/t21-lorem-ipsum</a></pre>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-cd0d38" data-block-id="c91eac1a38b4e8106e27654f74c26607" style="width: 808px; height: 436px; left: 76px; top: 210px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 12;"><pre style="font-size: 17px; line-height: 20px;"><code data-line-numbers="">git clone git@github.com:euclidity/t21-lorem-ipsum.git
+
+// make local changes
+
+git commit
+
+git push // !argh no permissions
+
+// fork
+
+git remote -v
+
+git remote rename origin upstream
+
+git remote add origin ___________________
+
+git push -u origin master
+
+git push -u origin main
+
+// open PR
+</code></pre></div></div></section></section><section class="stack" data-id="8c69a64a55250086935c62e50634c353"><section data-id="9696aee5dd48916cde1b18ea67c58760"><div class="sl-block" data-block-type="text" data-name="text-20f501" data-block-id="87f6b03f4d098b2b7a4912ef1992bea5" style="height: auto; width: 600px; left: 180px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>best practices</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-a6f395" data-block-id="3f75c3214d45d89d97380c58cba1a7f4" style="height: auto; width: 879px; left: 40.5px; top: 172px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="color:rgb(255, 255, 255); text-align:left"><span style="font-size:0.7em"><em>Q: Best practices for working on a project owned by someone else?</em></span></p>
+
+<p style="color:rgb(255, 255, 255); text-align:left"><span style="font-size:0.7em"><em>Q: Is git just for collaboration? Or should I be using it on my own projects too?</em></span></p>
+
+<p style="color:rgb(255, 255, 255); text-align:left"><span style="font-size:0.7em"><em>Q: When collaborating the check out, commit, merge etc... model makes sense. When working alone should we just commit as we go? Or be more structured?</em></span></p>
+
+<p style="color:rgb(255, 255, 255); text-align:left"> </p>
+
+<p style="text-align:left"><span style="font-size:0.7em"><em>Q: Why is main + branch_mr_X + branch_mr_y not good practice?</em></span></p>
+
+<p style="text-align:left"><span style="font-size:0.7em"><em>Q: What is a sensible policy when it comes to branches? How many should I be using?</em></span></p>
+
+<p style="text-align:left"><span style="font-size:0.7em"><em>Q: How to deal with others changing a file before you try to merge? (some mergers require too much time for a quick adjustment) Does git have a staging ground?</em></span></p>
+
+<p style="text-align:left"><span style="font-size:0.7em"><em>Q: When should I merge my work?</em></span></p>
+</div></div></section><section data-id="a5ca1dc0abb038c1f0bbbd0d6e69dd33"><div class="sl-block" data-block-type="text" data-name="text-62d088" data-block-id="eafce95acabb49b10da2854835770d86" style="height: auto; width: 600px; left: 180px; top: 20px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>gitfLow</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-c87768" data-block-id="2ef5814b500266c110665e95b33bef02" style="width: 734.578px; height: 518px; left: 112.711px; top: 91px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="658" data-natural-height="464" data-lazy-loaded="" data-src="version-control-for-scientists/8c7fecf29c62ba8722f45937d1c46680.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-6aeb57" data-block-id="37c30807ac3ec9aea8f86f64988c623a" style="height: auto; width: 800px; left: 80px; top: 639.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<pre><a href="https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/" target="_blank">Git flow vs github flow - Lucca Mezzalira</a></pre>
+</div></div></section><section data-id="3747109985a96852407f10b2846c025a"><div class="sl-block" data-block-type="text" data-name="text-62d088" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="a1d5807a025f0343ea41e99ab1c4cded"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>gitfLow</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-611b21" data-block-id="2d06176df4e0a3e9e9cb68edaded01c9" style="height: auto; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<h3><span style="font-size:0.9em">2 long lived branches: main, dev</span></h3>
+
+<h3><span style="font-size:0.9em">all other branches are short lived</span></h3>
+
+<h3><span style="font-size:0.9em">all commits to main are releases</span></h3>
+
+<h3><span style="font-size:0.9em">hotfix branches direct from main</span></h3>
+
+<h3><span style="font-size:0.9em">all other branches are from dev</span></h3>
+
+<h3><span style="font-size:27px">consistent naming</span></h3>
+
+<pre style="text-align:center"><span style="font-size:27px">hot/issue-232 feat/new-shiny fix/things</span></pre>
+
+<p> </p>
+</div></div></section><section data-id="85eddbceba7605c47f61a9e37918bb71"><div class="sl-block" data-block-type="text" data-name="text-62d088" style="height: auto; width: 600px; left: 180px; top: 90px;" data-block-id="bc497efcbfb886c3f1df804bed83f377"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>CONtinuous integration</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-1c894f" data-block-id="2c05e4654c891da71f44a9c68d05fbcf" style="height: auto; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3><span style="font-size:0.7em">the ideal: all developers WORK on main</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 328px;" data-block-id="45e9c39578d2936877343118e8c76650" data-name="text-eee0dc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3><span style="font-size:0.7em">no long lived branches</span></h3>
+
+<h3><span style="font-size:0.7em">merge as frequently as possible</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 490px;" data-block-id="96f22fd2379ce39650fbb1723584ece4" data-name="text-cce4db"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<h3><span style="font-size:0.7em">concurrent development via architecture</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-db4a20" data-block-id="bd222a9ba4f8751d208b1acf2c7f0271" style="height: auto; width: 600px; left: 180px; top: 594px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<pre><a href="https://martinfowler.com/articles/feature-toggles.html" target="_blank">feature toggles - Martin Fowler</a></pre>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-a8c8d4" data-block-id="6db16c37ce2af166810ad222dabcf86e" style="height: auto; width: 600px; left: 180px; top: 630px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>google: component based development</p>
+</div></div></section></section><section class="stack" data-id="7ee645862e2478fa4f9092e6b30af96a"><section data-id="b7d1d915a26cb895af267392095da37c"><div class="sl-block" data-block-type="text" data-name="text-ba2773" data-block-id="e99c6c8378f1444afe9ce6346804f4be" style="height: auto; width: 727px; left: 119.7px; top: 70px;"><div class="sl-block-style" style="z-index: 10; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Versioning for notebooks</h3>
+
+<h3>with curvenote</h3>
+</div></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-f25d8a" data-block-id="3f7d1c44773ce51a6b91926706df3cee" style="width: 806.4px; height: 345.6px; left: 80px; top: 240.2px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2352" data-natural-height="1008" data-lazy-loaded="" data-src="version-control-for-scientists/022ec9179d7b938d1d9b37acd9a74932.png"></div></div></section><section data-id="8718f2bcf9a9b41be9fa2c58dd625367"><div class="sl-block" data-block-type="text" data-name="text-3234fc" data-block-id="f185d8a1e6870bab184d8e2af52d3efe" style="height: auto; width: 728px; left: 130px; top: 58.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>using github with jupyter notebooks is difficult</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 728px; left: 130px; top: 58.5px;" data-block-id="777c84101d6004616445c541b5e96382" data-name="text-324467"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>using github with jupyter notebooks is difficult</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-6809f4" data-block-id="fe36ac5a8ec054fb0aa4ae60b919b8b5" style="height: auto; width: 600px; left: 180px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3><span style="font-size:0.7em">no meaningful diffs</span></h3>
+
+<h3><span style="font-size:0.7em">conflicts because of metadata etc..</span></h3>
+
+<h3><span style="font-size:0.7em">difficult to resolve conflicts</span></h3>
+
+<h3><span style="font-size:0.7em">works better with no outputs</span></h3>
+
+<h3><span style="font-size:0.7em">notebooks can get large and binary</span></h3>
+
+<h3><span style="font-size:0.7em">github doesn't render well</span></h3>
+
+<p><span style="font-size:0.7em"><a href="https://github.com/cgre-aachen/gempy_workshops/blob/master/workshops/Transform2021/t21_gempy.ipynb" target="_blank">gempy-github</a> <a href="https://curvenote.com/@leguark/transform2021-gempy-tutorial/!VVR1a4OSdrcopFaEUojf" target="_blank">gempy-cn</a></span></p>
+</div></div></section><section data-id="c4b00f8b99498642fb2ef9519d96f9ca"><div class="sl-block" data-block-type="text" data-name="text-ba2773" style="height: auto; width: 727px; left: 116.5px; top: 160px;" data-block-id="9288b2aef2655f9293c42e42ad43488a"><div class="sl-block-style" style="z-index: 10; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>JUPYTEXT</h3>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-7c8fdd" data-block-id="6fe391bd546046c3b357a5da15cf8b73" style="height: auto; width: 640px; left: 160px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<pre style="text-align: center;"><a href="https://github.com/mwouts/jupytext" target="_blank">https://github.com/mwouts/jupytext</a></pre>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-c9d44e" data-block-id="1cc8a5985d387bc06c310b24c9a0f1fd" style="height: auto; width: 800px; left: 80px; top: 490px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<pre style="text-align:center"><a href="https://www.youtube.com/watch?v=SDYdeVfMh48" target="_blank">Jupytext at JupyterCON 2020 - Marc Wouts</a></pre>
+</div></div></section><section data-id="a24ed67f0b755b4b4c41290e184ebef1"><div class="sl-block" data-block-type="text" data-name="text-4a541c" data-block-id="0801d1b40bf616e5af25f91fbe2d1d51" style="height: auto; width: 800px; left: 80px; top: 90px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>VERSIONING NOTEBOOKS EXAMPLE</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-07fa64" data-block-id="d513a1cc468b477d894fdcdc132b90d2" style="width: 688.214px; height: 372.679px; left: 135.893px; top: 187.321px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="2493" data-natural-height="1350" data-lazy-loaded="" data-src="version-control-for-scientists/4013c27e926158fea6b099bdb95e0cf5.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-7429a5" data-block-id="8b26ac339e2dfd75fa266e52300df5e5" style="height: auto; width: 800px; left: 80px; top: 610.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><a href="https://github.com/stevejpurves/t21-seismic-notebook" target="_blank">https://github.com/stevejpurves/t21-seismic-notebook</a></p>
+</div></div></section><section data-id="a0ff1592b6efb29cbca2034fdb39496c"><div class="sl-block" data-block-type="text" data-name="text-9f6089" style="height: auto; width: 716px; left: 124px; top: 90px;" data-block-id="0f580d084d7f196286792a7dcbec56fc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Wait what just happened?</h3>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-name="text-6845c8" style="height: auto; width: 716px; left: 124px; top: 210px;" data-block-id="9d56220c36997cd8f8d48fd775e99ae9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ol>
+	<li>Pulled a git repo</li>
+	<li>Saved to a curvenote project</li>
+	<li>Commited our notebook back into git</li>
+	<li>We have a got commit including curvenote metadata</li>
+	<li>Ran our notebook to produce outputs</li>
+	<li>Saved to Curvenote again</li>
+	<li>Share, pull out figures into a paper</li>
+</ol>
+</div></div></section></section><section class="stack" data-id="ff0120134cf464b28be53e5a166dce06"><section data-id="9cebbda2dfec9e37120aead565240e05"><div class="sl-block" data-block-type="text" data-name="text-ba2773" style="height: auto; width: 727px; left: 116.5px; top: 90px;" data-block-id="944b7bbc6d2a24063cbb7c452485a10b"><div class="sl-block-style" style="z-index: 10; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>data versioning</h3>
+
+<h3>with DVC</h3>
+</div></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-e1f254" data-block-id="811ac17c78802a9c38eddcf2ba0993b2" style="width: 806.399px; height: 355.74px; left: 76.8005px; top: 224.13px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1954" data-natural-height="862" data-lazy-loaded="" data-src="version-control-for-scientists/95f23f0f27f2e41d8bf90dd49d7aaa55.png"></div></div></section><section data-id="371f78b9664b808a29fca5f0e3a15623"><div class="sl-block" data-block-type="text" data-name="text-ba2773" style="height: auto; width: 727px; left: 116.5px; top: 90px;" data-block-id="db2281f62cf0802f17f96daa9ac56dd7"><div class="sl-block-style" style="z-index: 10; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>DVC What?</h3>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-d719fd" data-block-id="39c503ae85dccfdea6ba27d51e03a93f" style="height: auto; width: 600px; left: 180px; top: 174px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<pre style="text-align: center;"><a href="https://dvc.org/" target="_blank">https://dvc.org/</a></pre>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-869f50" data-block-id="5f0248143bccfc04e73fbef67ca21a7d" style="width: 678.013px; height: 436px; left: 140.993px; top: 226px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1440" data-natural-height="926" data-lazy-loaded="" data-src="version-control-for-scientists/a7eeea142e4a74ec18d328fa2b171620.png"></div></div></section><section data-id="589305dca3ef2596ec9644360edc3275"><div class="sl-block" data-block-type="text" data-name="text-ba2773" style="height: auto; width: 283.5px; left: 36.5px; top: 70px;" data-block-id="58f6eb11116b76e816d0225c5e5ab09d"><div class="sl-block-style" style="z-index: 10; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>DVC What?</h3>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-d719fd" style="height: auto; width: 283.5px; left: 36.5px; top: 154px;" data-block-id="7fa625124fcdd6d816a9a36e35949a60"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<pre style="text-align:center"><span style="font-size:0.7em"><a href="https://dvc.org/" target="_blank">https://dvc.org/</a></span></pre>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-ff3ea2" data-block-id="675bf8a18c84773450840e2101c55eda" style="width: 597.64px; height: 669px; left: 345.107px; top: 15px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1206" data-natural-height="1350" data-lazy-loaded="" data-src="version-control-for-scientists/c0f78a598fb816e3d8542aeb62b7b514.png"></div></div></section><section data-id="c64d6d9bbf19bd1e2553a9cb8712d1fc"><div class="sl-block" data-block-type="text" data-name="text-9f6089" data-block-id="09ecf08f58f278190667e951bbe3e50b" style="height: auto; width: 600px; left: 186px; top: 90px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>initialise</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-f188a9" data-block-id="871cb93d752a4f200b8fcd0e9a29c656" style="width: 640px; height: 370px; left: 160px; top: 190px;"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 31px; line-height: 37px;"><code data-line-numbers="">dvc init
+
+git status
+
+git commit -am "init dvc"
+
+</code></pre></div></div></section><section data-id="803f5976282722d0482b6dd104e9fa17"><div class="sl-block" data-block-type="text" data-name="text-9f6089" style="height: auto; width: 600px; left: 186px; top: 90px;" data-block-id="4f2a5b340ec59a6e048ca1198cfdb3d1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>add remote</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-f188a9" style="width: 800px; height: 265px; left: 80px; top: 217.5px;" data-block-id="0276e3cc43fac2470a925af793c44eea"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 19px; line-height: 23px;"><code data-line-numbers="">dvc remote add mydrive gdrive://1uW00kcqk8VCRvBoYltmtQ7xq3EdIqPk4
+
+dvc remote list
+
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-c0f2f6" data-block-id="74f82edde0052e043f82915b08500a09" style="height: auto; width: 600px; left: 180px; top: 579.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<pre style="text-align: center;"><a href="https://dvc.org/doc/user-guide/setup-google-drive-remote#url-format" target="_blank">on valid gdrive url formats</a></pre>
+</div></div></section><section data-id="931811d76fd3e8261bb84a8374c05bcf"><div class="sl-block" data-block-type="text" data-name="text-9f6089" style="height: auto; width: 600px; left: 186px; top: 90px;" data-block-id="828910f796504174bcae5b8d2a404520"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>add DATA &amp; PUSH</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-f188a9" style="width: 800px; height: 265px; left: 80px; top: 217.5px;" data-block-id="824965fc2dbda98f29b670904f1ddb9c"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 19px; line-height: 23px;"><code data-line-numbers="">cp -r ../data .
+
+dvc add data
+
+git status
+
+dvc push
+
+git status
+
+</code></pre></div></div>
+</section><section data-id="c551e787bd573d196f62a0f6a790d1f9"><div class="sl-block" data-block-type="text" data-name="text-9f6089" style="height: auto; width: 716px; left: 124px; top: 90px;" data-block-id="fa3e41f115c1a58af6551f531ad4cb27"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>COMMIT DVC METADATA TO GIT</h3>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-f188a9" style="width: 800px; height: 397px; left: 80px; top: 217.5px;" data-block-id="c2fb1e80aaa3be02e092e6987a442847"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="none" style="z-index: 11;"><pre style="font-size: 19px; line-height: 23px;"><code data-line-numbers="">09:11 $ git status                                                                                                 
+On branch main                                                                                                     
+Your branch is ahead of 'origin/main' by 1 commit.                                                                 
+  (use "git push" to publish your local commits)
+Changes to be committed:
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
+
+        modified:   .dvc/config
+        modified:   .gitignore
+        new file:   data.dvc
+
+
+git commit -am "added dataset"
+
+git push
+</code></pre></div></div>
+</section><section data-id="7195fea05a3404eeb6d411dc52875423"><div class="sl-block" data-block-type="text" data-name="text-9f6089" style="height: auto; width: 716px; left: 124px; top: 90px;" data-block-id="24ca4009a9adb520e1b7f2874d6f654c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>Wait what just happened?</h3>
+</div></div>
+
+<div class="sl-block" data-block-type="text" data-name="text-6845c8" data-block-id="4460b8d1f0b6e6608f327828ed0f79aa" style="height: auto; width: 716px; left: 124px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ol>
+	<li>pulled a git repo</li>
+	<li>moved our data inside of our repo</li>
+	<li>initialised dvc</li>
+	<li>setup a data remote</li>
+	<li>added our data to dvc &amp; pushed</li>
+	<li>commited all metadata into git &amp; pushed</li>
+</ol>
+
+<p> </p>
+
+<p>a git commit linked to our data</p>
+</div></div></section><section data-id="36e9e3b62f82212bdbf62e9136171c2c"></section></section><section class="stack" data-id="b548f4194f4c3b5691cbc0a4835e317a"><section data-id="9b3f31e2d80fedf7cda419606a651f6f"><div class="sl-block" data-block-type="text" data-name="text-ba2773" style="height: auto; width: 727px; left: 126.5px; top: 313px;" data-block-id="0ee3394d712847ddf8a12e939a6eb069"><div class="sl-block-style" style="z-index: 10; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h2>summary</h2>
+</div></div></div></section><section data-id="ee7910caf2ff8c2a3739791ba893685d"><div class="sl-block" data-block-type="text" data-name="text-ba2773" style="height: auto; width: 727px; left: 116.5px; top: 90px;" data-block-id="045563a031fb6069ae13c62b99be2722"><div class="sl-block-style" style="z-index: 10; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>summary - GIT</h3>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-cd578a" data-block-id="0a88414dc827eb30bf9fd7b65345daba" style="height: auto; width: 800px; left: 80px; top: 216.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3><span style="font-size:0.7em">use git to version your code</span></h3>
+
+<h3> </h3>
+
+<h3><span style="font-size:0.7em">learn commadn line essentials</span></h3>
+
+<h3> </h3>
+
+<h3><span style="font-size:0.7em">adopt and use a GUI tool e.g. VSCode</span></h3>
+</div></div></section><section data-id="8ee4734b2b761fb12808d197eb4092f2"><div class="sl-block" data-block-type="text" data-name="text-ba2773" style="height: auto; width: 727px; left: 116.5px; top: 52px;" data-block-id="8fbf6a80a304c0ee0ac1a9447b23db3f"><div class="sl-block-style" style="z-index: 10; transform: rotate(0deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<h3>summary</h3>
+
+<h3>reproducible workflow</h3>
+</div></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-8927ba" data-block-id="45186b011f267459847237df32a7688e" style="width: 806.4px; height: 384.463px; left: 80px; top: 197.768px;"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1162" data-natural-height="554" style="" data-src="version-control-for-scientists/f6d4dbbe3f6dc50531ba55c8d7613384.png"></div></div></section><section data-id="98dee105861dd1fbfbbe7079c4d70c05"><div class="sl-block" data-block-type="image" data-name="image-6dce48" data-block-id="8dadf6b4d5cbd464c0b4711620296a76" style="width: 806.4px; height: 290.7px; left: 76.8px; top: 204.65px;"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="896" data-natural-height="323" style="" data-src="version-control-for-scientists/820195959b8aeeca854d9aa183398db2.png"></div></div></section></section><section data-id="ecba114ca6ee1889880f1762a0ed2cf6"><div class="sl-block" data-block-type="image" data-name="image-cb81e2" data-block-id="bfef130c7c11e289577b52145a87e7fe" style="width: 806.399px; height: 434.931px; left: 76.8005px; top: 132.535px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1906" data-natural-height="1028" data-lazy-loaded="" data-src="version-control-for-scientists/47e7872cef2a1b648b19d19a4b243f6e.png"></div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":2104372,"slug":"version-control-for-scientists","title":"Version Control for Scientists","description":"","width":960,"height":700,"margin":0.05,"visibility":"all","published_at":"2021-04-20T15:16:04.822Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/00aa18a122e7c55b6f1c0ca51b197988/thumb.jpg?1619005043","view_count":1,"user":{"id":1813240,"username":"stevepurves","name":"Steve Purves","description":null,"thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GjLo5yv9649aPd5A_L9EmNcw3xUFylODma-M2aWDw=s96-c","account_type":"lite","team_id":null,"settings":{"id":11317265,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"quicksand","theme_color":"black-mint","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":92,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1619084912999,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
