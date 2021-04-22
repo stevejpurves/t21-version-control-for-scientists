@@ -1,6 +1,8 @@
 # Version Control for Scientists
 ## A Transform 2021 Tutorial
 
+Watch the Tutorial on [YouTube](https://www.youtube.com/watch?v=S4uqsbV-gxY)
+
 View the slide deck here: [stevejpurves.github.io/t21-version-control-for-scientists](stevejpurves.github.io/t21-version-control-for-scientists)
 
 ## Other Resources
